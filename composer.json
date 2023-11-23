@@ -1,0 +1,20 @@
+{
+    "name": "akawalko/laminas-auth-redbean-adapter",
+    "description": "Laminas authentication adapter using a lightweight ORM called RedBeanPhp",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arkadiusz Kawałko"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+        "laminas/laminas-authentication": "^2",
+        "nilportugues/sql-query-builder": "^1.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    }
+}
