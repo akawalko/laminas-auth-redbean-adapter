@@ -12,9 +12,23 @@
     "require": {
         "php": ">=7.4",
         "laminas/laminas-authentication": "^2",
-        "nilportugues/sql-query-builder": "^1.8"
+        "nilportugues/sql-query-builder": "^1.8",
+        "gabordemooij/redbean": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaminasAuthRedbeanAdapter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaminasAuthRedbeanAdapter\\Test\\": "test/"
+        }
+    },
+    "suggest": {
+        "gabordemooij/redbean": "ORM layer that creates models, config and database on the fly"
     }
 }
