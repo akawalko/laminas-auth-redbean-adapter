@@ -4,6 +4,9 @@ require __DIR__ . '/../vendor/autoload.php';
 use LaminasAuthRedbeanAdapter\RedbeanCallbackCheckAdapter;
 use NilPortugues\Sql\QueryBuilder\Builder\GenericBuilder;
 
+// Before you run this example, make sure you have created a database and a user account that provides access to it,
+// and have also executed the SQL commands from the db_structure.sql and db_entries.sql files.
+
 $redbean = (require_once 'db_connection.php')();
 
 $authAdapter = new RedbeanCallbackCheckAdapter(
