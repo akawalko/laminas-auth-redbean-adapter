@@ -34,6 +34,7 @@ if ($authenticationResult->isValid()) {
     // or specify the columns you want to skip
     //$authAdapter->getResultRowObject(null, ['is_admin']);
 } else {
+    echo "Authentication failed\n";
     var_dump($authenticationResult);
     // or use specific method to find out why it failed
     //$authenticationResult->getCode(); // int; check constans in Laminas\Authentication\Result class
