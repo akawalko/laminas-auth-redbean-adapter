@@ -7,7 +7,7 @@
 --; rory-bergnaum@gmail.com         rLVJ/*9MShgWfV      NO
 
 
-INSERT INTO user (email, password, active, is_admin) VALUES
+INSERT INTO user (email, password, is_active, is_admin) VALUES
     ('kira-shanahan@yahoo.com', '$2y$10$CwKgjqgHsM8DMQALfZCvIuo282a8VGoaA2h3V5FuVr89dhJPvsBlm', 1, 0),
     ('santino-kertzmann@hotmail.com', '$2y$10$XnrWhkFYk87VtRjGDsnjX.RqtXV6Fei5rx..Qnoj5YOBz5pLjEZM.', 0, 0),
     ('dorian-conn@yahoo.com', '$2y$10$I.Foc28FcPidi.taAVPyKuUztJHd/9RR9Wl564wUOWgH1gCzGMngK', 1, 0),
