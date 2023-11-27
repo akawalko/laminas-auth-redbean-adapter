@@ -24,7 +24,7 @@ $authAdapter = new RedbeanCallbackCheckAdapter(
 $authenticationResult = $authAdapter
     ->setIdentity('kira-shanahan@yahoo.com')
     ->setCredential('A,0p3QC!0_') // valid password
-    ->authenticate();
+    ->authenticate(); // Will execute query: SELECT user.* FROM user WHERE (user.email = :v1)
 
 if ($authenticationResult->isValid()) {
     echo "Authentication succeeded\n";
@@ -44,3 +44,20 @@ if ($authenticationResult->isValid()) {
     
     //$authenticationResult->getMessages(); // array
 }
+
+echo "\n\n";
+
+// If your table with users contains too many columns and you want to slim down the default query
+// that retrieves all the columns, you can do it as follows
+$authAdapter
+    ->getDbSelect()
+    ->setColumns(['email', 'password']);
+
+// Columns you set (via constructor or setter) as identityColumn and credentialColumn are bare minimum.
+
+$authenticationResult = $authAdapter
+    ->setIdentity('kira-shanahan@yahoo.com')
+    ->setCredential('A,0p3QC!0_') // valid password
+    ->authenticate(); // will execute: SELECT user.email, user.password FROM user WHERE (user.email = :v1)
+
+var_dump($authenticationResult->isValid()); // will return true
