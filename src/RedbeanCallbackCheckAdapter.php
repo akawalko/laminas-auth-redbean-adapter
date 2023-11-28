@@ -141,7 +141,7 @@ class RedbeanCallbackCheckAdapter extends AbstractAdapter
      * @return self Provides a fluent interface
      * @throws InvalidArgumentException
      */
-    public function setCredentialValidationCallback(callable $validationCallback): self
+    public function setCredentialValidationCallback($validationCallback): self
     {
         if (! is_callable($validationCallback)) {
             throw new InvalidArgumentException('Invalid callback provided');
