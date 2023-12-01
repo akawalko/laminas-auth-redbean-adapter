@@ -325,7 +325,7 @@ class RedbeanCallbackCheckAdapter extends AbstractAdapter
             );
         } catch (Exception $e) {
             throw new RuntimeException(
-                'The supplied parameters to DbTable failed to '
+                'The supplied parameters to database adapter failed to '
                 . 'produce a valid sql statement, please check table and column names '
                 . 'for validity.',
                 0,
