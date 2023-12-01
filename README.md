@@ -27,8 +27,9 @@ the other for the password. For obvious reasons, a column with user ID will also
 - gabordemooij/redbean (can be installed in 2 ways, that's why I omitted this package in composer.json)
 
 
-
-    composer require akawalko/laminas-auth-redbean-adapter
+```
+composer require akawalko/laminas-auth-redbean-adapter
+```
 
 ## Usage
 After installing the package, read the Laminas\Authentication documentation at [https://docs.laminas.dev/laminas-authentication/](https://docs.laminas.dev/laminas-authentication/)
